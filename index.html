@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Happy Birthday My Love ❤️</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Montserrat,sans-serif;background:#fff8f5;color:#30272b;overflow-x:hidden}
+.hero{min-height:100vh;display:flex;align-items:center;justify-content:center;text-align:center;position:relative;overflow:hidden;background:linear-gradient(145deg,#fff8fb,#f9e9ef)}
+.hero-content{position:relative;z-index:3;padding:28px}
+.kicker{font-size:12px;letter-spacing:6px;color:#b67a91;margin-bottom:28px}
+.decor{color:#d45b82;font-size:28px;margin-bottom:28px}
+.line{display:inline-block;width:65px;height:1px;background:#d9a5b7;vertical-align:middle;margin:0 13px}
+.name{font-family:"Cormorant Garamond",serif;font-size:clamp(58px,15vw,96px);font-weight:500;line-height:.95}
+.heart{font-size:38px;margin:18px 0}
+.date{font-size:14px;letter-spacing:5px;color:#7b6870;margin-top:18px}
+.btn{display:inline-block;margin-top:48px;padding:19px 36px;border-radius:40px;background:linear-gradient(135deg,#df668d,#bd426c);color:#fff;text-decoration:none;font-size:12px;letter-spacing:3px;box-shadow:0 12px 30px #c66b8845}
+.floating{position:absolute;bottom:-40px;color:#e7799d;opacity:.55;animation:up linear infinite;font-size:22px}
+.f1{left:8%;animation-duration:8s}.f2{left:24%;animation-duration:11s;animation-delay:2s}.f3{left:44%;animation-duration:9s;animation-delay:1s}.f4{left:66%;animation-duration:12s;animation-delay:3s}.f5{left:85%;animation-duration:10s;animation-delay:2s}
+@keyframes up{to{transform:translateY(-115vh) rotate(360deg)}}
+.music{position:fixed;right:18px;bottom:18px;width:58px;height:58px;border-radius:50%;border:1px solid #e5ccd5;background:#fff;z-index:20;font-size:22px}
+.countdown-section,.gallery-section,.letter-section{padding:85px 20px;text-align:center}
+.countdown-section{background:#fffdfb}
+.small{font-size:11px;letter-spacing:5px;color:#b67a91;margin-bottom:18px}
+h2{font-family:"Cormorant Garamond",serif;font-size:54px;font-weight:500;margin-bottom:30px}
+.countdown{display:flex;justify-content:center;gap:10px;flex-wrap:wrap}
+.box{width:76px;padding:16px 8px;border:1px solid #e2c7d1;background:#fff}
+.box strong{display:block;font-family:"Cormorant Garamond",serif;font-size:34px;color:#bd4f78}
+.box span{font-size:9px;letter-spacing:2px}
+.gallery-section{background:linear-gradient(#f9e8ee,#fff8f5)}
+.gallery-intro{max-width:650px;margin:0 auto 38px;color:#6c5a61;line-height:1.7}
+.gallery{max-width:680px;margin:auto;display:flex;flex-direction:column;gap:28px}
+.card{background:#fff;padding:10px 10px 18px;box-shadow:0 10px 35px #6d3d4b18;border-radius:18px;overflow:hidden}
+.card img{display:block;width:100%;height:auto;border-radius:12px}
+.card p{font-family:"Cormorant Garamond",serif;font-size:24px;margin-top:14px;color:#5a3b48}
+.punch{padding:90px 24px;text-align:center;background:#f3dce5}
+.punch p{max-width:700px;margin:auto;font-family:"Cormorant Garamond",serif;font-size:clamp(30px,7vw,52px);line-height:1.35}
+.punch span{color:#bd426c}
+.letter-section{background:#fffdf9}
+.letter{max-width:700px;margin:auto;border:1px solid #e2c7d1;padding:45px 28px}
+.letter p{font-family:"Cormorant Garamond",serif;font-size:22px;line-height:1.8}
+.final{min-height:55vh;display:flex;align-items:center;justify-content:center;text-align:center;background:#f7e9ee;padding:30px}
+.final h1{font-family:"Cormorant Garamond",serif;font-size:clamp(55px,13vw,92px);font-weight:500}
+.final p{margin-top:15px;letter-spacing:4px;color:#9c6178}
+.note{font-size:11px;color:#8b707a;margin-top:18px}
+</style>
+</head>
+<body>
+
+<div class="floating f1">♥</div><div class="floating f2">♡</div><div class="floating f3">♥</div>
+<div class="floating f4">♡</div><div class="floating f5">♥</div>
+
+<audio id="music" loop>
+  <source src="him-and-i.mp3" type="audio/mpeg">
+</audio>
+<button class="music" id="musicBtn" onclick="toggleMusic()">🎵</button>
+
+<section class="hero">
+  <div class="hero-content">
+    <div class="kicker">WITH ALL MY LOVE</div>
+    <div class="decor"><span class="line"></span>♡<span class="line"></span></div>
+    <div class="name">My Love</div>
+    <div class="heart">❤️</div>
+    <div class="kicker">HAPPY BIRTHDAY</div>
+    <div class="date">17 AUGUST 2026</div>
+    <a class="btn" href="#surprise">OPEN MY SURPRISE</a>
+  </div>
+</section>
+
+<section class="countdown-section">
+  <div class="small">COUNTING EVERY SECOND</div>
+  <h2>Until Your Special Day ❤️</h2>
+  <div class="countdown">
+    <div class="box"><strong id="days">00</strong><span>DAYS</span></div>
+    <div class="box"><strong id="hours">00</strong><span>HOURS</span></div>
+    <div class="box"><strong id="minutes">00</strong><span>MINUTES</span></div>
+    <div class="box"><strong id="seconds">00</strong><span>SECONDS</span></div>
+  </div>
+</section>
+
+<section class="gallery-section" id="surprise">
+  <div class="small">A LITTLE SURPRISE FOR YOU ❤️</div>
+  <h2>Things I Want You To Know</h2>
+  <p class="gallery-intro">Scroll through these little pieces of love. Every picture says something my heart wants to tell you. 💕</p>
+
+  <div class="gallery">
+    <div class="card"><img src="love-1.jpg" alt="Love message"></div>
+    <div class="card"><img src="love-2.jpg" alt="Romantic memory"></div>
+    <div class="card"><img src="love-3.jpg" alt="Sweet message"></div>
+    <div class="card"><img src="love-4.jpg" alt="Cute love message"></div>
+    <div class="card"><img src="love-5.jpg" alt="Romantic message"></div>
+    <div class="card"><img src="love-6.jpg" alt="Sweet couple message"></div>
+    <div class="card"><img src="love-7.jpg" alt="Romantic message"></div>
+    <div class="card"><img src="love-8.jpg" alt="Love message"></div>
+  </div>
+</section>
+
+<section class="coffee-page">
+  <div class="coffee-card">
+    <div class="keyboard">⌨️</div>
+
+    <div class="coffee-cup">
+      ☕
+      <span>♥</span>
+    </div>
+
+    <div class="coffee-message">
+      “The keyboard has<br>
+      <span>copy &amp; paste…</span><br>
+      but you’re my everyday<br>
+      <b>coffee after the paste 💕</b>”
+    </div>
+
+    <div class="coffee-note">
+      Because some people are not just part of the sentence…<br>
+      they become the whole story. ❤️
+    </div>
+  </div>
+</section>
+
+<section class="punch">
+  <p>
+    “I don't need a perfect life...
+    <br>I just need <span>you</span> in my life.” ❤️
+    <br><br>
+    “In every lifetime, I'd still choose <span>you.</span>”
+  </p>
+</section>
+
+<section class="letter-section">
+  <div class="small">A LETTER FOR MY LOVE</div>
+  <div class="letter">
+    <p>
+      My Love,<br><br>
+      Happy Birthday to the man who makes my ordinary days feel special.
+      You are my favourite person, my comfort, my biggest support and my home. ❤️
+      <br><br>
+      Thank you for every smile, every hug, every silly moment and every memory
+      we have made together.
+      <br><br>
+      If I could give you one thing, I would give you the chance to see yourself
+      through my eyes — then you would know how precious you are to me.
+      <br><br>
+      <b>You are my today, my tomorrow and my forever. ❤️</b>
+      <br><br>
+      Happy Birthday, my love.<br><br>
+      Forever yours,<br><b>Your Wife ❤️</b>
+    </p>
+  </div>
+  <p class="note">Music: add your legally obtained copy as <b>him-and-i.mp3</b></p>
+</section>
+
+<section class="final">
+  <div>
+    <h1>I Love You ❤️</h1>
+    <p>TODAY • TOMORROW • ALWAYS</p>
+  </div>
+</section>
+
+<script>
+const target = new Date("August 17, 2026 00:00:00").getTime();
+
+function updateCountdown(){
+  const now = Date.now();
+  const d = Math.max(0, target - now);
+  document.getElementById("days").textContent = String(Math.floor(d/86400000)).padStart(2,"0");
+  document.getElementById("hours").textContent = String(Math.floor(d%86400000/3600000)).padStart(2,"0");
+  document.getElementById("minutes").textContent = String(Math.floor(d%3600000/60000)).padStart(2,"0");
+  document.getElementById("seconds").textContent = String(Math.floor(d%60000/1000)).padStart(2,"0");
+}
+updateCountdown();
+setInterval(updateCountdown,1000);
+
+const music = document.getElementById("music");
+const musicBtn = document.getElementById("musicBtn");
+function toggleMusic(){
+  if(music.paused){ music.play(); musicBtn.textContent="🔊"; }
+  else { music.pause(); musicBtn.textContent="🎵"; }
+}
+</script>
+</body>
+</html>
